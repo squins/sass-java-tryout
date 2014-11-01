@@ -1,0 +1,12 @@
+@mixin default-style() {
+  background-color: green;
+  font-style: italic;
+}
+
+h1 {
+  @include default-style();
+}
+
+p {
+  @include default-style();
+}
