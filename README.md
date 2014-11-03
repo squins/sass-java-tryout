@@ -72,7 +72,7 @@ To make changes, perform following steps:
 * Learn Sass language concepts. Read the [Sass guide](http://Sass-lang.com/guide).
 * Install Compass, read the [Compass install guide](http://compass-style.org/install/).
 * Checkout [this GitHub project](https://github.com/keesvandieren/Sass-java-tryout) and import it in IntelliJ IDEA
-* Run application with mvn `jetty:run`
+* Run application with `mvn jetty:run`
 * Visit [http://localhost:8080/](http://localhost:8080/) to see the examples
 * Make changes in src/main/webapp/WEB-INF/sass
 * Refresh [http://localhost:8080/](http://localhost:8080/) in the browser to see the changes applied. 
