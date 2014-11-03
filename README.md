@@ -59,7 +59,7 @@ filter is created by Darrin Holst and is [available on GitHub](https://github.co
 project also provides a Maven plugin.   
 
 ### Run the war
-Run the project with mvn jety:run. Go to [http://localhost:8080](http://localhost:8080) to see the results.
+Run the project with mvn jetty:run. Go to [http://localhost:8080](http://localhost:8080) to see the results.
 
 NOTE: startup may take a while, as during startup JRuby with Compass is started, which might take up to 30 seconds.
 
