@@ -1,10 +1,25 @@
-$color: green;
+
+@import "_common";
+
+$font-stack:    Helvetica, sans-serif;
+$primary-color: #333;
+$header-size-factor: 1.5;
 
 
-h1 {
-  color: $color;
+body {
+  font: 100% $font-stack;
+  color: $primary-color;
 }
 
-p {
-  background-color: $color;
+h1 {
+  color : red;
+  font-size: #{15pt * $header-size-factor}
+}
+
+h2 {
+  font-size: #{13pt * $header-size-factor}
+}
+
+h3 {
+  font-size: #{11pt * $header-size-factor}
 }

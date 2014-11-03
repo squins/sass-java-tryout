@@ -1,12 +1,15 @@
-@mixin default-style() {
-  background-color: green;
-  font-style: italic;
+@import "_common";
+
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  -ms-border-radius: $radius;
+  border-radius: $radius;
 }
 
-h1 {
-  @include default-style();
-}
-
-p {
-  @include default-style();
+.box {
+  border:1px solid blue;
+  width: 300px;
+  padding: 20px;
+  @include border-radius(20px);
 }
