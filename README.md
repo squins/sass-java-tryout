@@ -1,6 +1,9 @@
 Sass-java-tryout
 ================
 
+[![Build Status](https://travis-ci.org/keesvandieren/sass-java-tryout.png)](https://travis-ci.org/keesvandieren/sass-java-tryout)
+
+
 Tryout to combine Sass, Java in a standard war project.
 
 We assume that you are using IntelliJ IDEA as IDE, and has hands-on experience with Java and Maven.
