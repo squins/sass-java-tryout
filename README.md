@@ -4,12 +4,15 @@ Sass-java-tryout
 [![Build Status](https://travis-ci.org/keesvandieren/sass-java-tryout.png)](https://travis-ci.org/keesvandieren/sass-java-tryout)
 
 
-Tryout to combine Sass, Java in a standard war project.
+Tryout to combine Sass and Java in a standard war project.
 
-We assume that you are using IntelliJ IDEA as IDE, and has hands-on experience with Java and Maven.
+I assume that you are using IntelliJ IDEA as IDE. Some hands-on experience with Java and Maven will be helpful.
 
 ## Goals of tryout
-Goals of this tryout are to answer the following questions:
+
+One of my companies customers is about to use SCSS in one of their projects. Their current stack is made up with Java.  Goals of this tryout is to find out how Java and SCSS suite together.
+
+Questions answered during my journey:
 
  * Why Sass and not just plain CSS?
  * How are Sass, SCSS, CSS, and Compass related to each other? 
@@ -18,57 +21,57 @@ Goals of this tryout are to answer the following questions:
  * Does a Maven project that wants to compile Sass, need Compass executable installed on the machine?
  * Can we make the Maven build fail if Sass compilation fails?
  
- Additionally, I'd like to get familiar with basic Sass syntax with some exercises. 
+ During this tryout we also created some exercises to get familiar with basic Sass syntax with some exercises.
 
 ## Why Sass and not just plain CSS?
-CSS has many limitations, such as: no support for variables, inheritance, composition etc. That takes out the fun of 
-writing css, as lots of copy-paste is needed to get the job done.
- 
-One way to take away this pain is to make use of a CSS preprocessor. Most known preprocessors are 
-[LESS](http://lesscss.org/) and [Sass](http://Sass-lang.com/).
+CSS has many limitations, such as: no support for variables, no inheritance, no composition etc. Writing CSS needs a lot of copy paste, which makes it hard to maintain CSS  files.
+
+One way to take away maintenance pain is to make use of a CSS preprocessor. Most known preprocessors are [LESS](http://lesscss.org/) and [Sass](http://sass-lang.com/).
 
 I decided to go for Sass in my tryout.
 
 ## Why Sass?
-It seems that Sass 
-[is getting most attention](http://www.google.nl/trends/explore#q=%2Fm%2F054k6n_%2C%20%2Fm%2F03qlp8&cmpt=q), so we 
-decided to give it a try.
+It seems that Sass [is getting most attention](http://www.google.nl/trends/explore#q=%2Fm%2F054k6n_%2C%20%2Fm%2F03qlp8&cmpt=q), so we decided to give it a try.
 
 ## How are Sass, SCSS, CSS, and Compass related to each other?
-CSS stand for Cascading Style Sheets is a way to define design for an HTML document. There are 3 majors versions: CSS 1, 
-CSS 2 and CSS 3.
-
-All major browsers support CSS 1 and CSS 2. Most browsers support CSS 3 partially.
+CSS stand for Cascading Style Sheets. It is a way to define design for an HTML document, and browsers understand it.
  
-Sass stands for Syntactically Awesome Stylesheets. It is a CSS preprocessor that adds features 
-currently missing in CSS. It compiles Sass files to CSS 3. It helps producing better CSS. Main advantages over plain CSS 
-are:
-                                                                   
-* No more code duplication as needed in CSS
-* Makes it a lot easier to get CSS that works well across all current browsers
-* SCSS readability is better than CSS readability.
-  
-SCSS is one of the two syntaxes available in Sass. It is a superset of CSS 3, making it easy to embed existing CSS 
-stylesheets. For sake of simplicity, other syntax won't be handled here.
+SCSS stands for Sassy CSS. It is a superset of CSS, and adds support for variables, inheritance and composition.
 
-Compass is a CSS authoring framework build on top of Sass. It adds many standard Mixins (reusable functions) for CSS3
-and other features. Most CSS3 features are supported though vendor-specific prefixes. Compass mixins helps to support
-them all in an easy-to-read manner.
+SASS stands for Syntactically Awesome Stylesheets. Sass is the language, which compiles SCSS files into CSS files that can be understand by browsers.
+
+You may also have heard of Compass. Compass is a CSS authoring framework. Main features include:
+
+* Predefined reusable sass extensions
+* Generate sprite image from list of images
+* Generate grid background image.
 
 ## How can we integrate Sass in a java war?
-                                                                                                             
-This project integrates Sass in a Java war. Compass is started using a Servlet Filter, as defined in web.xml. Servlet 
-filter is created by Darrin Holst and is [available on GitHub](https://github.com/darrinholst/Sass-java). This GitHub
-project also provides a Maven plugin.   
+
+Sass is made in the Ruby language. Ruby can also run on the JVM using JRuby. There are a few integrations available that
+use JRuby. The ones we tested out are:
+* [Sass Java component provided by Darrin Holst](https://github.com/darrinholst/sass-java)
+* [Jasig sass maven plugin](https://github.com/Jasig/sass-maven-plugin)
+
+I started the tryout using the Sass java component provided by Darrin Holst.
+
+This project integrates Sass in a Java war. Sass is started using a Servlet Filter, as defined in web.xml. This setup is nice to see changes in scss files realtime while running the war project with maven jetty plugin.
 
 ### Run the war
-Run the project with mvn jetty:run. Go to [http://localhost:8080](http://localhost:8080) to see the results.
+
+To run the war use following steps:
+# Run the project with mvn jetty:run.
+# Go to [http://localhost:8080](http://localhost:8080) to see Sass in action.
 
 NOTE: startup may take a while, as during startup JRuby with Compass is started, which might take up to 30 seconds.
 
-The Sass sources are in src/main/webapp/WEB-INF/sass
+The Sass sources are in src/main/webapp/WEB-INF/sass.
+
+The CSS files are compiled to src/main/webapp/stylesheets.
 
 ## Making changes
+
+* TODO: duidelijker maken dat Ruby alleen nodig is voor autocompletion.
 
 To make changes, perform following steps:
 
