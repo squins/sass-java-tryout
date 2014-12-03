@@ -11,6 +11,10 @@
     <name>sass-java-trout</name>
     <description>Tryout to combine Sass, Java in a standard war project </description>
 
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+
     <dependencies>
         <dependency>
             <groupId>com.darrinholst</groupId>
@@ -24,7 +28,6 @@
         </dependency>
     </dependencies>
     <build>
-
         <plugins>
             <plugin>
                 <artifactId>maven-compiler-plugin</artifactId>
@@ -39,7 +42,6 @@
                 <artifactId>jetty-maven-plugin</artifactId>
                 <version>9.2.3.v20140905</version>
             </plugin>
-
         </plugins>
     </build>
 </project>
