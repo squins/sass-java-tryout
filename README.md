@@ -63,23 +63,23 @@ Next was to try the other plugin: the [Jasig sass maven plugin](https://github.c
 * sass:update-stylesheets: compiles scss files into the css files
 * sass:watch: watches scss files, and compiles on the fly to css. (useful for rapid change view during development).
 
-### Run the war
+## Run the sample war project
 
 To run the war use following steps:
-# Run the project with mvn jetty:run.
-# Go to [http://localhost:8080](http://localhost:8080) to see Sass in action.
 
-NOTE: startup may take a while, as during startup JRuby with Compass is started, which might take up to 30 seconds.
+* Clone the project with git clone https://github.com/keesvandieren/sass-java-tryout.git
+* cd sass-java-tryout
+* mvn jetty:run
+* Go to [http://localhost:8080](http://localhost:8080) to see Sass in action.
 
 The Sass sources are in src/main/webapp/WEB-INF/sass.
 
 The CSS files are compiled to src/main/webapp/stylesheets.
 
-## Making changes
+## Making changes to scss files without restarting the container
+It is possible to change scss files, and see the changes reflected in the webapp without container restart.
 
-* TODO: duidelijker maken dat Ruby alleen nodig is voor autocompletion.
 
-To make changes, perform following steps:
 
 * Learn Sass language concepts. Read the [Sass guide](http://Sass-lang.com/guide).
 * Install Compass, read the [Compass install guide](http://compass-style.org/install/).
