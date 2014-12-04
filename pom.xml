@@ -17,11 +17,6 @@
 
     <dependencies>
         <dependency>
-            <groupId>com.darrinholst</groupId>
-            <artifactId>sass-java</artifactId>
-            <version>3.4.4</version>
-        </dependency>
-        <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-log4j12</artifactId>
             <version>1.7.5</version>
@@ -29,6 +24,32 @@
     </dependencies>
     <build>
         <plugins>
+            <plugin>
+                <groupId>org.jasig.maven</groupId>
+                <artifactId>sass-maven-plugin</artifactId>
+                <version>1.1.1</version>
+                <executions>
+                    <execution>
+                        <id>package</id>
+                        <phase>compile</phase>
+                        <goals>
+                            <goal>update-stylesheets</goal>
+                        </goals>
+                    </execution>
+                </executions>
+                <configuration>
+                    <useCompass>true</useCompass>
+                    <resources>
+                        <resource>
+                            <source>
+                                <directory>${basedir}/src/main/webapp/WEB-INF/sass</directory>
+                            </source>
+                            <destination>${project.basedir}/src/main/webapp/stylesheets</destination>
+                        </resource>
+                    </resources>
+                </configuration>
+            </plugin>
+
             <plugin>
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>3.1</version>
