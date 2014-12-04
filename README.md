@@ -50,6 +50,7 @@ You may also have heard of Compass. Compass is a CSS authoring framework. Main f
 
 Sass is made in the Ruby language. Ruby can run on the JVM using JRuby. There are a few integrations available that
 use JRuby. The ones we tested out are:
+
 * [Sass Java component provided by Darrin Holst](https://github.com/darrinholst/sass-java)
 * [Jasig sass maven plugin](https://github.com/Jasig/sass-maven-plugin)
 
@@ -59,9 +60,7 @@ recompiles on the fly if necessary. This works great for development.
 However there is a nasty problem that kills this approach: adding JRuby to the classpath of `mvn jetty:run` increases startup time
 with 20 seconds.
 
-Next was to try the other plugin: the [Jasig sass maven plugin](https://github.com/Jasig/sass-maven-plugin). It has two goals:
-* sass:update-stylesheets: compiles scss files into the css files
-* sass:watch: watches scss files, and compiles on the fly to css. (useful for rapid change view during development).
+Next was to try the other plugin: the [Jasig sass maven plugin](https://github.com/Jasig/sass-maven-plugin). With that plugin, automatic recompile on change can be achieved with a separate maven goal that needs to run in its own console with `mvn sass:watch`.
 
 ## Run the sample war project
 
@@ -77,9 +76,14 @@ The Sass sources are in src/main/webapp/WEB-INF/sass.
 The CSS files are compiled to src/main/webapp/stylesheets.
 
 ## Making changes to scss files without restarting the container
-It is possible to change scss files, and see the changes reflected in the webapp without container restart.
+It is possible to change scss files, and see the changes reflected in the browser without container restart.
 
+Steps to achieve this:
+* open a seperate console
+* cd sass-java-tryout
+* mvn sass:watch.
 
+## Other references
 
 * Learn Sass language concepts. Read the [Sass guide](http://Sass-lang.com/guide).
 * Install Compass, read the [Compass install guide](http://compass-style.org/install/).
