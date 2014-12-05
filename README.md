@@ -3,7 +3,6 @@ Sass-java-tryout
 
 [![Build Status](https://travis-ci.org/keesvandieren/sass-java-tryout.png)](https://travis-ci.org/keesvandieren/sass-java-tryout)
 
-
 Tryout to combine Sass, Compass and Java in a standard java web (WAR) project.
 
 This project can be used as template for new war projects.
@@ -12,7 +11,7 @@ I assume that you are using IntelliJ IDEA as IDE. Some hands-on experience with 
 
 ## Goals of tryout
 
-One of my customers is about to use SCSS in one of their projects. Their current stack is made up with Java. Goals of this tryout is to find out how Java, Sass and Compass function together.
+One of my customers is about to use Sass in one of their projects. Their current stack is made up with Java. Goals of this tryout is to find out how Java, Sass and Compass function together.
 
 Questions to answer during my journey:
 
@@ -63,9 +62,9 @@ use JRuby to integrate Sass in Java via a Maven Plugin. The plugins I started wi
 * [Sass Java component provided by Darrin Holst](https://github.com/darrinholst/sass-java)
 * [Jasig sass maven plugin](https://github.com/Jasig/sass-maven-plugin)
 
-I started with the first. The plugin uses a servlet Filter to monitor Sass files that recompile modified scss files on the fly if necessary.
+I started with the first. The plugin uses a servlet Filter to monitor Sass files that recompile modified scss files on the fly when files are modified.
 
-However there is a nasty problem that kills this approach: adding JRuby to the classpath of `mvn jetty:run` increases startup time with about half a minute.
+This works well but there is is a nasty problem that kills this approach: adding JRuby to the classpath of `mvn jetty:run` increases startup time with about half a minute.
 
 Next was to try the other plugin: the [Jasig sass maven plugin](https://github.com/Jasig/sass-maven-plugin). With that plugin, automatic recompile on change can be achieved with a separate maven goal that needs to run in its own console with `mvn sass:watch`.
 
