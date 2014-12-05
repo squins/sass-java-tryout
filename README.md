@@ -26,20 +26,21 @@ Questions to answer during my journey:
 During this tryout I created some exercises to get familiar with basic Sass syntax.
 
 ## Why Sass and not just plain CSS?
-CSS has its limitations :
+
+Writing CSS needs a lot of copy paste which makes it hard to maintain CSS files, especially in large projects.
+
+Limitations of CSS include:
 
 * no support for variables
 * no inheritance
 * no composition.
 
-Writing CSS needs a lot of copy paste which makes it hard to maintain CSS files, especially in large projects.
-
-One way to take away this problems is to make use of a CSS preprocessor. Most known preprocessors are [LESS](http://lesscss.org/) and [Sass](http://sass-lang.com/).
+One way to take away these problems is to make use of a CSS preprocessor. Most known preprocessors are [LESS](http://lesscss.org/) and [Sass](http://sass-lang.com/).
 
 I decided to go for Sass in my tryout.
 
 ## Why Sass?
-It seems that Sass [is getting most attention](http://www.google.nl/trends/explore#q=%2Fm%2F054k6n_%2C%20%2Fm%2F03qlp8&cmpt=q), so we decided to give it a try.
+It seems that Sass [is getting most attention](http://www.google.nl/trends/explore#q=%2Fm%2F054k6n_%2C%20%2Fm%2F03qlp8&cmpt=q), so I decided to give it a try.
 
 ## How are CSS, SCSS, Sass and Compass related to each other?
 CSS stand for Cascading Style Sheets. It is a way to define design for an HTML document. Browsers can work with CSS files.
@@ -50,14 +51,14 @@ Sass stands for Syntactically Awesome Stylesheets. Sass is the language and comp
 
 Compass is a CSS authoring framework. Main features include:
 
-* Predefined reusable sass extensions mainly for HTML5 and CSS3
-* Generate sprite image from list of images
-* Generate grid background image.
+* predefined reusable Sass extensions mainly for HTML5 and CSS3
+* generate sprite image from list of images
+* generate grid background image.
 
 ## How to integrate the Sass compiler in a java webapp?
 
 Sass is made in the Ruby language. Ruby can run on the JVM using JRuby. There are a few integrations available that
-use JRuby. The plugins I started with are:
+use JRuby to integrate Sass in Java via a Maven Plugin. The plugins I started with are:
 
 * [Sass Java component provided by Darrin Holst](https://github.com/darrinholst/sass-java)
 * [Jasig sass maven plugin](https://github.com/Jasig/sass-maven-plugin)
@@ -89,7 +90,7 @@ To run the application use following steps on a console:
 
 Go to [http://localhost:8080](http://localhost:8080) to see Sass in action with several examples.
 
-The Sass sources are in src/main/webapp/WEB-INF/sass.
+The .scss sources are in src/main/webapp/WEB-INF/sass.
 
 The CSS files are compiled to src/main/webapp/stylesheets.
 
@@ -101,10 +102,10 @@ Open a new console, and execute commands:
 * cd sass-java-tryout
 * mvn sass:watch
 
-Changes in .scss files will be compiled instant in the webapp by refreshing the page.
+Changes in .scss files will be compiled instant and available in the webapp by refreshing the page.
 
 ## Maven sass plugin Compass support
-The plugin supports Compass, but by default it is not enabled. Add `<useCompass>true</useCompass>` to the maven plugin configuration to enable Compass.
+The plugin supports Compass, but by default support is disabled. Add `<useCompass>true</useCompass>` to the maven plugin configuration to enable Compass.
 
 ## Conclusions
 * Sass and compass integration in Java is available with JRuby
