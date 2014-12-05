@@ -23,16 +23,16 @@ Questions to answer during my journey:
  * Is it needed to have Ruby, Sass or Compass locally installed to compile the Maven project?
  * Can we make the Maven build fail if Sass compilation fails?
  
- During this tryout I created some exercises to get familiar with basic Sass syntax.
+During this tryout I created some exercises to get familiar with basic Sass syntax.
 
 ## Why Sass and not just plain CSS?
-CSS has many limitations such as:
+CSS has its limitations :
 
 * no support for variables
 * no inheritance
 * no composition.
 
-Writing CSS needs a lot of copy paste which makes it hard to maintain CSS  files.
+Writing CSS needs a lot of copy paste which makes it hard to maintain CSS files, especially in large projects.
 
 One way to take away this problems is to make use of a CSS preprocessor. Most known preprocessors are [LESS](http://lesscss.org/) and [Sass](http://sass-lang.com/).
 
@@ -41,12 +41,12 @@ I decided to go for Sass in my tryout.
 ## Why Sass?
 It seems that Sass [is getting most attention](http://www.google.nl/trends/explore#q=%2Fm%2F054k6n_%2C%20%2Fm%2F03qlp8&cmpt=q), so we decided to give it a try.
 
-## How are Sass, SCSS, CSS and Compass related to each other?
-CSS stand for Cascading Style Sheets. It is a way to define design for an HTML document and browsers understand it.
+## How are CSS, SCSS, Sass and Compass related to each other?
+CSS stand for Cascading Style Sheets. It is a way to define design for an HTML document. Browsers can work with CSS files.
  
 SCSS stands for Sassy CSS. It is a superset of CSS. It adds support for variables, inheritance and composition.
 
-Sass stands for Syntactically Awesome Stylesheets. Sass is the language, which compiles SCSS files into CSS files that can be used by browsers.
+Sass stands for Syntactically Awesome Stylesheets. Sass is the language and compiler. Its compiler compiles SCSS files to CSS.
 
 Compass is a CSS authoring framework. Main features include:
 
@@ -80,14 +80,14 @@ Search for a solution continued. I found [this fork](https://github.com/GeoDiens
 So I stick with this plugin.
 
 ## How to run the example project
-Thhe sass-java-tryout project has the sass-maven-plugin configured, and some Sass examples included that could be used as a tutorial for developers new to Sass.
+The sass-java-tryout project has the sass-maven-plugin configured, and some Sass examples included that could be used as a tutorial for developers new to Sass.
 
 To run the application use following steps on a console:
 * git clone https://github.com/keesvandieren/sass-java-tryout.git
 * cd sass-java-tryout
 * mvn jetty:run
 
-Go to [http://localhost:8080](http://localhost:8080) to see Sass in action.
+Go to [http://localhost:8080](http://localhost:8080) to see Sass in action with several examples.
 
 The Sass sources are in src/main/webapp/WEB-INF/sass.
 
