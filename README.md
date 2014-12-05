@@ -117,4 +117,4 @@ The plugin supports Compass, but by default support is disabled. Add `<useCompas
 * Read the compass guide [Compass guide](http://compass-style.org/help/).
 
 ## Feedback and suggestions
-Please send that to [@keesvandieren](https://twitter.com/keesvandieren) or contact us at [www.squins.com/contact](http://www.squins.com/contact)
+Please [Tweet us](https://twitter.com/squinscom) or contact us via [our contact form](http://www.squins.com/contact).
