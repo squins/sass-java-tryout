@@ -112,8 +112,8 @@ The plugin supports Compass, but by default support is disabled. Add `<useCompas
 * All dependencies are managed by Maven; no Ruby, Sass or Compass installation needed.
 
 ## Next steps
-* Read and understand the examples. Review Scss files in `src/main/webapp/WEB-INF/sass/`
-* Read the sass guide [Sass guide](http://Sass-lang.com/guide).
+* Read and understand the examples. Review scss files in `src/main/webapp/WEB-INF/sass/`
+* Read the sass guide [Sass guide](http://Sass-lang.com/guide)
 * Read the compass guide [Compass guide](http://compass-style.org/help/).
 
 ## Feedback and suggestions
