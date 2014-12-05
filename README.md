@@ -20,7 +20,7 @@ Questions to answer during my journey:
  * How to integrate the Sass compiler in a java webapp?
  * Is it possible to change Sass file without restarting the container?
  * Is it needed to have Ruby, Sass or Compass locally installed to compile the Maven project?
- * Can we make the Maven build fail if Sass compilation fails?
+ * How to make the Maven build fail if Sass compilation fails?
  
 During this tryout I created some exercises to get familiar with basic Sass syntax.
 
