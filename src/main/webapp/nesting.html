@@ -6,14 +6,15 @@
 </head>
 <body>
 <h1>Nesting</h1>
-<div class="introduction">When writing HTML you've probably noticed that it has a clear nested and visual hierarchy. CSS,
+<div class="introduction"><p>When writing HTML you've probably noticed that it has a clear nested and visual hierarchy. CSS,
     on the other hand, doesn't.
     Sass will let you nest your CSS selectors in a way that follows the same visual hierarchy of your HTML. Be aware
     that overly nested rules will result in over-qualified CSS that could prove hard to maintain and is generally
-    considered bad practice.
+    considered bad practice.</p>
+    <p>This example shows how to style an Unordered List, but only the ul inside the nav tag.</p>
 </div>
 
-<p>Navigation menu, ul in nav tag:</p>
+<p>Navigation menu with ul in nav tag:</p>
 <nav>
     <ul>
         <li> <a href="#">Home</a>
@@ -23,7 +24,7 @@
     </ul>
 </nav>
 
-<p>Another list:</p>
+<p>Another standalone ul:</p>
 <ul>
     <li>List item 1</li>
     <li>List item 2</li>
