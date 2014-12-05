@@ -113,8 +113,8 @@ The plugin supports Compass, but by default support is disabled. Add `<useCompas
 
 ## Next steps
 * Read and understand the examples. Review scss files in `src/main/webapp/WEB-INF/sass/`
-* Read the sass guide [Sass guide](http://Sass-lang.com/guide)
-* Read the compass guide [Compass guide](http://compass-style.org/help/).
+* Read the [Sass guide](http://Sass-lang.com/guide)
+* Read the [Compass guide](http://compass-style.org/help/).
 
 ## Feedback and suggestions
 Please [Tweet us](https://twitter.com/squinscom) or contact us via [our contact form](http://www.squins.com/contact).
