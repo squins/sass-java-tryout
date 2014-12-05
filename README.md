@@ -56,8 +56,7 @@ Compass is a CSS authoring framework. Main features include:
 
 ## How to integrate the Sass compiler in a java webapp?
 
-Sass is made in the Ruby language. Ruby can run on the JVM using JRuby. There are a few integrations available that
-use JRuby to integrate Sass in Java via a Maven Plugin. The plugins I started with are:
+Sass is made in the Ruby language. Ruby can run on the JVM using JRuby. There are a few integrations available that use JRuby to integrate Sass in Java via a Maven Plugin. The plugins I started with are:
 
 * [Sass Java component provided by Darrin Holst](https://github.com/darrinholst/sass-java)
 * [Jasig sass maven plugin](https://github.com/Jasig/sass-maven-plugin)
