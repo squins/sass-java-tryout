@@ -1,27 +1,35 @@
-Sass-java-tryout
-================
+# Sass-java-tryout
 
-[![Build Status](https://travis-ci.org/keesvandieren/sass-java-tryout.png)](https://travis-ci.org/keesvandieren/sass-java-tryout)
+[![Build Status](https://travis-ci.org/squins/sass-java-tryout.png)](https://travis-ci.org/squins/sass-java-tryout)
 
-Tryout to combine Sass, Compass and Java in a standard java web (WAR) project.
+
+## Changelog
+
+
+14 oct 2017:
+
+* Removed Compass framework (seems dead, support to be removed)
+* Updated Jetty, Maven plugin to recent versions.
+
+Tryout to combine Sass and Java in a standard java web (WAR) project.
 
 This project can be used as template for new war projects.
 
-I assume that you are using IntelliJ IDEA as IDE. Some hands-on experience with Java and Maven will be helpful.
+We assume that IntelliJ IDEA is used as IDE. Some hands-on experience with Java and Maven will be helpful.
 
 ## Goals of tryout
 
-One of my customers is about to use Sass in one of their projects. Their current stack is made up with Java. Goals of this tryout is to find out how Java, Sass and Compass function together.
+One of our customers is about to use Sass in one of their projects. Their current stack is made up with Java. Goals of this tryout is to find out how Java and Sass (SCSS) function together.
 
 Questions to answer during my journey:
 
  * Why Sass and not just plain CSS?
- * How are Sass, SCSS, CSS and Compass related to each other?
+ * How are Sass, SCSS and CSS related to each other?
  * How to integrate the Sass compiler in a java webapp?
  * Is it possible to change Sass file without restarting the container?
- * Is it needed to have Ruby, Sass or Compass locally installed to compile the Maven project?
+ * Is it needed to have Ruby or Sass locally installed to compile the Maven project?
  * How to make the Maven build fail if Sass compilation fails?
- 
+
 During this tryout I created some exercises to get familiar with basic Sass syntax.
 
 ## Why Sass and not just plain CSS?
@@ -41,18 +49,12 @@ I decided to go for Sass in my tryout.
 ## Why Sass?
 It seems that Sass [is getting most attention](http://www.google.nl/trends/explore#q=%2Fm%2F054k6n_%2C%20%2Fm%2F03qlp8&cmpt=q), so I decided to give it a try.
 
-## How are CSS, SCSS, Sass and Compass related to each other?
+## How are CSS, SCSS and Sass related to each other?
 CSS stand for Cascading Style Sheets. It is a way to define design for an HTML document. Browsers can work with CSS files.
- 
+
 SCSS stands for Sassy CSS. It is a superset of CSS. It adds support for variables, inheritance and composition.
 
 Sass stands for Syntactically Awesome Stylesheets. Sass is the language and compiler. Its compiler compiles SCSS files to CSS.
-
-Compass is a CSS authoring framework. Main features include:
-
-* predefined reusable Sass extensions mainly for HTML5 and CSS3
-* generate sprite image from list of images
-* generate grid background image.
 
 ## How to integrate the Sass compiler in a java webapp?
 
@@ -82,6 +84,7 @@ So I stick with this plugin.
 The sass-java-tryout project has the sass-maven-plugin configured, and some Sass examples included that could be used as a tutorial for developers new to Sass.
 
 To run the application use following steps on a console:
+
 * git clone https://github.com/keesvandieren/sass-java-tryout.git
 * cd sass-java-tryout
 * mvn jetty:run
@@ -101,19 +104,14 @@ Open a new console, and execute commands:
 * mvn sass:watch
 
 Changes in .scss files will be compiled instant and available in the webapp by refreshing the page.
-
-## Maven sass plugin Compass support
-The plugin supports Compass, but by default support is disabled. Add `<useCompass>true</useCompass>` to the maven plugin configuration to enable Compass.
-
 ## Conclusions
-* Sass and compass integration in Java is available with JRuby
-* Hot deployment for SASS and Compass is available
-* All dependencies are managed by Maven; no Ruby, Sass or Compass installation needed.
+* Sass integration in Java is available with JRuby
+* Hot deployment for SASS is available
+* All dependencies are managed by Maven; no Ruby or Sass installation needed.
 
 ## Next steps
 * Read and understand the examples. Review scss files in `src/main/webapp/WEB-INF/sass/`
-* Read the [Sass guide](http://Sass-lang.com/guide)
-* Read the [Compass guide](http://compass-style.org/help/).
+* Read the sass guide [Sass guide](http://Sass-lang.com/guide)
 
 ## Feedback and suggestions
 Please [Tweet us](https://twitter.com/squinscom) or contact us via [our contact form](http://www.squins.com/contact).
